@@ -76,89 +76,141 @@
     <div class="brand">
       <h1><span class="leaf">🌿</span> J'ardine</h1>
     </div>
-    <p class="subtitle">Règles de confidentialité</p>
-    <p class="updated">Dernière mise à jour : 04 Mai 2026</p>
+    <p class="subtitle">Politique de confidentialité</p>
+    <p class="updated">Dernière mise à jour : 22 novembre 2026</p>
 
     <hr />
 
-    <h2>1. Introduction</h2>
+    <h2>1. Éditeur</h2>
     <p>
-      L'application <strong>J'ardine</strong> (ci-après « l'Application »), développée par
-      <strong>MMD Concept / J'ardine Studio</strong>, s'engage à protéger la vie privée des
-      utilisateurs. Cette politique détaille nos pratiques concernant la collecte, l'utilisation et
-      la protection des données personnelles et sensibles des utilisateurs et des appareils.
+      J'ardine est développée et éditée par <strong>Bruno Vederine</strong>, micro-entrepreneur
+      (MMD), domicilié à Mérignac (France).<br />
+      Contact : <a href="mailto:jardine.app.contact@gmail.com">jardine.app.contact@gmail.com</a>
     </p>
 
     <h2>2. Données collectées et finalités</h2>
-    <p>Nous collectons uniquement les données nécessaires au bon fonctionnement de l'Application :</p>
+    <p>Nous collectons uniquement les données nécessaires au fonctionnement du service :</p>
     <ul>
       <li>
-        <strong>Données d'identification :</strong> Nom et adresse e-mail pour la création de compte
-        et l'authentification sécurisée.
+        <strong>Identification :</strong> nom complet, pseudo, adresse e-mail —
+        création de compte et authentification.
       </li>
       <li>
-        <strong>Localisation :</strong> Nous collectons les données de localisation de l'appareil
-        pour permettre l'affichage des annonces de jardinage à proximité. Cette collecte s'effectue
-        uniquement lorsque l'application est en cours d'utilisation ou selon vos autorisations.
+        <strong>Mot de passe :</strong> hashé (bcrypt) avant stockage, jamais transmis en clair.
       </li>
       <li>
-        <strong>Médias :</strong> Accès à la galerie photo pour permettre la publication d'annonces
-        avec photos.
+        <strong>Position géographique :</strong> précise (GPS) ou approximative —
+        affichage des annonces à proximité et notifications de jardinage à proximité.
+        Une dernière position horodatée est conservée côté serveur uniquement pour
+        déclencher ces notifications.
       </li>
       <li>
-        <strong>Identifiants d'appareil :</strong> Utilisés pour l'envoi de notifications push
-        concernant vos échanges.
+        <strong>Annonces et photos :</strong> titre, description, catégorie, prix, photos —
+        publication et consultation des annonces. Les photos sont hébergées chez Cloudinary.
+      </li>
+      <li>
+        <strong>Messages privés :</strong> échanges entre utilisateurs —
+        fonctionnement de la messagerie.
+      </li>
+      <li>
+        <strong>Avis :</strong> note et commentaire laissé après un échange —
+        réputation des jardiniers.
+      </li>
+      <li>
+        <strong>Jeton de notification (push token) :</strong> identifiant technique de l'appareil —
+        envoi de notifications push (messages reçus, annonces proches, rappels).
+      </li>
+      <li>
+        <strong>Emails transactionnels :</strong> votre adresse e-mail est utilisée pour
+        envoyer le code de réinitialisation de mot de passe, l'e-mail de bienvenue et
+        la confirmation de suppression de compte.
       </li>
     </ul>
 
-    <h2>3. Traitement sécurisé des données</h2>
-    <p>Toutes les données sensibles sont traitées avec le plus haut niveau de sécurité :</p>
-    <ul>
-      <li>
-        <strong>Cryptage :</strong> Toutes les transmissions de données entre l'Application et nos
-        serveurs s'effectuent via le protocole sécurisé HTTPS (SSL/TLS).
-      </li>
-      <li>
-        <strong>Stockage :</strong> Les mots de passe sont hachés via l'algorithme bcrypt avant
-        stockage.
-      </li>
-      <li>
-        <strong>Confidentialité :</strong> Nous ne vendons jamais vos données personnelles ou
-        sensibles à des tiers.
-      </li>
-    </ul>
-
-    <h2>4. Conservation et Suppression</h2>
-    <ul>
-      <li>
-        <strong>Données de compte :</strong> Conservées tant que votre compte est actif. Vous pouvez
-        demander la suppression de votre compte et de vos données à tout moment depuis les paramètres
-        de l'Application.
-      </li>
-      <li>
-        <strong>Transactions :</strong> Pour des raisons légales, les données relatives aux échanges
-        sont anonymisées et conservées pendant 5 ans.
-      </li>
-      <li>
-        <strong>Logs techniques :</strong> Conservés pendant une durée maximale d'un an pour assurer
-        la sécurité et le débogage.
-      </li>
-    </ul>
-
-    <h2>5. Vos Droits (RGPD)</h2>
+    <h2>3. Pas de publicité, pas de revente</h2>
     <p>
-      Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de portabilité et de
-      suppression de vos données. Pour exercer ces droits, vous pouvez utiliser les fonctionnalités
-      intégrées à l'Application ou nous contacter directement.
+      Vos données personnelles ne sont jamais vendues, louées ni partagées à des tiers
+      à des fins commerciales ou publicitaires. Elles sont utilisées exclusivement pour
+      faire fonctionner l'application.
+    </p>
+
+    <h2>4. Sous-traitants techniques</h2>
+    <ul>
+      <li><strong>Render</strong> — hébergement du serveur backend (Francfort, Allemagne — UE)</li>
+      <li><strong>MongoDB Atlas</strong> — base de données (Paris, France — UE)</li>
+      <li><strong>Cloudinary</strong> — stockage et diffusion des photos</li>
+      <li><strong>Brevo</strong> — envoi d'e-mails transactionnels (France — UE)</li>
+      <li><strong>Expo / Firebase Cloud Messaging</strong> — notifications push</li>
+      <li><strong>Google Maps Platform</strong> — cartographie</li>
+    </ul>
+    <p>
+      Les comptes, annonces et messages sont hébergés dans l'Union européenne.
+      Certains prestataires (Cloudinary pour les photos, Expo et Firebase pour les
+      notifications, Google Maps pour la carte) peuvent traiter des données en dehors
+      de l'UE, notamment aux États-Unis ; ces transferts sont encadrés comme indiqué
+      ci-dessous.
     </p>
     <p>
-      <strong>Contact Responsable :</strong> MMD Concept - J'ardine Studio (Bruno VEDERINE)<br />
-      Email : <a href="mailto:mymotivactiondaily@gmail.com">mymotivactiondaily@gmail.com</a>
+      Pour les sous-traitants situés hors de l'Union européenne, les transferts sont
+      encadrés par le <strong>Data Privacy Framework UE–États-Unis</strong> ou par les
+      <strong>clauses contractuelles types</strong> de la Commission européenne.
+    </p>
+
+    <h2>5. Durée de conservation</h2>
+    <ul>
+      <li><strong>Données de compte :</strong> conservées jusqu'à la suppression du compte.</li>
+      <li>
+        <strong>Messages, annonces, avis, position :</strong> supprimés avec le compte.
+      </li>
+      <li>
+        <strong>Transactions :</strong> anonymisées et conservées 5 ans
+        (obligations légales françaises).
+      </li>
+      <li>
+        <strong>Jetons de notification :</strong> supprimés à la déconnexion de l'appareil
+        ou à la suppression du compte.
+      </li>
+      <li>
+        <strong>Logs techniques serveur :</strong> conservés pour une durée limitée par
+        l'hébergeur, à des fins de sécurité et de diagnostic.
+      </li>
+    </ul>
+
+    <h2>6. Suppression du compte</h2>
+    <p>
+      Depuis l'application : <strong>Profil → Paramètres ⚙️ → Zone de Danger →
+      Supprimer mon compte</strong>.<br />
+      La suppression efface immédiatement votre profil, vos annonces, vos messages,
+      vos avis et vos notifications. Les transactions sont anonymisées.
+      Un e-mail de confirmation vous est envoyé.
+    </p>
+    <p>
+      Page de suppression de compte (accessible sans connexion) :<br />
+      <a href="https://jardine-backend.onrender.com/api/gdpr/delete-account-info">
+        jardine-backend.onrender.com/api/gdpr/delete-account-info
+      </a>
+    </p>
+
+    <h2>7. Vos droits (RGPD)</h2>
+    <p>
+      Conformément au RGPD, vous disposez d'un droit d'accès, de rectification,
+      d'effacement, de portabilité et d'opposition concernant vos données.<br />
+      Pour exercer ces droits, contactez-nous :
+      <a href="mailto:jardine.app.contact@gmail.com">jardine.app.contact@gmail.com</a><br />
+      Vous pouvez également introduire une réclamation auprès de la
+      <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>
+    </p>
+
+    <h2>8. Sécurité</h2>
+    <p>
+      Toutes les communications sont chiffrées (HTTPS/TLS). Les mots de passe sont
+      hachés avec bcrypt. Aucun mot de passe n'est écrit dans les journaux serveur.
     </p>
 
     <div class="footer">
-      © 2026 MMD Concept - J'ardine Studio. Tous droits réservés.<br />
-      Autorité de contrôle : CNIL (France) — <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>
+      © 2026 Bruno Vederine — MMD. Tous droits réservés.<br />
+      Autorité de contrôle : CNIL (France) —
+      <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>
     </div>
   </main>
 </body>
